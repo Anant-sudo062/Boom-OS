@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boom-OS</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!--Css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/boot.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+
+</head>
+
+
+
+<body>
+    <!--BootScreen-->
+
+    <section id="boot-screen">
+        <div class="boot-container">
+            <!--logo-->
+            <div class="logo-wrapper">
+
+                <div class="logo-ring"></div>
+                <div class="logo">
+                    Boom-OS
+                </div>
+            </div>
+
+            <!--os_name-->
+            <h1 class="os-name">
+                Boom-OS
+            </h1>
+            <!--osMessage-->
+            <p id="boot-message">
+                Initializting Os kernel
+            </p>
+
+            <!--ProgressBar-->
+            <div class="progress-container">
+
+                <div id="progress-bar"></div>
+            </div>
+
+            <p id="progress-text">
+                0%
+            </p>
+
+            <span class="version">
+                Version 1.0
+            </span>
+
+        </div>
+    </section>
+
+    <!--Desktop-->
+    <main id="desktop">
+
+        <!--Wallpaper-->
+        <div class="wallpaper">
+
+        </div>
+        <!--Icons-->
+        <div id="desktop-icons">
+
+        </div>
+
+        <!--windows-->
+        <div id="window-layer">
+
+        </div>
+        <!--Taskbar-->
+        <footer id="taskbar">
+            <button id="start-button">
+                ⬢
+            </button>
+
+            <div id="running-apps">
+
+            </div>
+
+            <div id="system-tray">
+                <span id="clock">
+                    12:00
+                </span>
+            </div>
+
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/boot.js"></script>
+    <script src="js/desktop.js"></script>
+</body>
+
+
+</html>

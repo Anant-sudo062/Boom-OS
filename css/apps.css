@@ -1,0 +1,239 @@
+.folder-app{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+}
+.folder-toolbar{
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+}
+.folder-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.folder-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 4px;
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    transition: box-shadow 0.15s ease;
+}
+.folder-item-icon{
+    font-size: 22px;
+}
+.folder-item-name{
+    font-size: 10px;
+    color: var(--text-mid);
+    text-align: center;
+    word-break: break-word;
+}
+.folder-item.selected{
+    box-shadow: var(--pressed-sm);
+}
+
+.browser-app{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+.browser-bar{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+}
+.browser-bar button{
+    width: 28px;
+    height: 28px;
+    border-radius: var(--r-sm);
+    box-shadow: var(--raised-sm);
+    font-size: 12px;
+    color: var(--text-mid);
+    flex-shrink: 0;
+    transition: box-shadow 0.15s ease;
+}
+.browser-bar button:active{
+    box-shadow: var(--pressed-sm);
+}
+.broswer-url{
+    flex: 1;
+    min-width: 0;
+    padding: 7px 10px;
+    border-radius: var(--r-pill);
+    box-shadow: var(--pressed-sm);
+    font-size: 11px;
+    color: var(--text-hi);
+    background: transparent;
+}
+.browser-go{
+    width: auto !important;
+    padding: 0 12px;
+    font-size: 11px !important;
+    color: var(--accent) !important;
+}
+.broswer-frame{
+    flex: 1;
+    width: 100%;
+    border-radius: var(--r-sm);
+    border: none;
+    box-shadow: var(--pressed);
+    background: #fff;
+}
+.settings-app{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.settings-label{
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.wallpaper-swatches{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.wallpaper-swatch{
+    width: 44px;
+    height: 44px;
+    border-radius: var(--r-sm);
+    box-shadow: var(--raised-sm);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.wallpaper-swatch.active{
+    box-shadow: var(--pressed-sm);
+}
+.settings-row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.volume-slider{
+    flex: 1;
+    accent-color: var(--accent);
+}
+.volume-volue{
+    font-size: 11px;
+    color: var(--text-hi);
+    min-width: 34px;
+    text-align: right;
+}
+
+/*terminal*/
+.terminal-app{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 12px;
+}
+.terminal-output{
+    flex: 1;
+    overflow-y: auto;
+    color: var(--text-mid);
+    line-height: 1.6;
+}
+.terminal-input-row{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.terminal-prompt{
+    color: var(--accent);
+}
+.terminal-input{
+    flex: 1;
+    background: transparent;
+    color: var(--text-hi);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.paint-app{
+    display:flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.paint-toolbar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.paint-colors{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.paint-color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: var(--raised-sm);
+    transition: transform 0.15s ease;
+}
+.paint-color:active{
+    transform: scale(0.9);
+}
+.paint-color-custom{
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: none;
+    box-shadow: var(--raised-sm);
+}
+.paint-size{
+    width: 80px;
+    accent-color: var(--accent);
+}
+.paint-clear{
+    margin-left: auto;
+    padding: 6px 12px;
+    border-radius: var(--r-pill);
+    font-size: 11px;
+    color: var(--text-mid);
+    box-shadow: var(--raised-sm);
+}
+.paint-clear:active{
+    box-shadow: var(--pressed-sm);
+}
+.paint-canvas{
+    width: 100%;
+    border-radius: var(--r-sm);
+    box-shadow: var(--pressed);
+    background: #0d0f14;
+    cursor: crosshair;
+    touch-action: none;
+}
+.music-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+}
+.music-art{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    box-shadow: var(--raised);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--accent);
+}

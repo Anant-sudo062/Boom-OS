@@ -1,0 +1,119 @@
+#boot-screen{
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#boot-screen.hide{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.boot-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+
+.logo-wrapper{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    box-shadow: var(--raised-lg);
+    border-radius: 50%;
+}
+.logo-ring{
+    position: absolute;
+    inset: 14px;
+    box-shadow: var(--pressed);
+    border-radius: 50%;
+}
+.logo-ring::after{
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    content: '';
+    width: 9px;
+    height: 9px;
+    margin-left: -4.5px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px 2px var(--accent-dim);
+    animation: ringOrbit 1.8s linear infinite;
+    transform-origin: 50% 46px;
+}
+.logo{
+position: relative;
+z-index: 1;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.05em;
+color: var(--accent);
+text-align: center;
+padding: 0 8px;
+}
+/*Os*/
+.os-name{
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-hi);
+}
+#boot-message{
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--text-mid);
+}
+#boot-message::after{
+    display: inline-block;
+    width: 6px;
+    height: 12px;
+    margin-left: 5px;
+    background: var(--accent);
+    vertical-align: middle;
+    content: '';
+    animation: cursorBlink 1s steps(1) infinite;
+}
+/*Progress-container*/
+.progress-container{
+    width: 240px;
+    height: 16px;
+    border-radius: var(--r-pill);
+    background: var(--bg);
+    box-shadow: var(--pressed);
+    padding: 3px;
+}
+#progress-bar{
+    height: 100%;
+    width: 0%;
+    border-radius: var(--r-pill);
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    box-shadow: 2px 2px 6px var(--shadow-dark);
+    transition: width 0.25s ease-out;
+}
+#progress-text{
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+}
+
+.version{
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    padding: 6px 14px;
+    border-radius: var(--r-pill);
+    box-shadow: var(--pressed-sm);
+}
